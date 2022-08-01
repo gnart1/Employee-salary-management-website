@@ -43,6 +43,7 @@ class BangCongController extends Controller
                             <td>' . $bang_cong->gio_ra . '</td>
                             <td>' . $bang_cong->thoi_gian . '</td>
                             <td>' . $bang_cong->ten_loai_kl . '</td>
+                            <td>' . $bang_cong->tien_thuong . '</td>
                             <td>' . $bang_cong->tien_phat . '</td>
                         </tr>';
                 }

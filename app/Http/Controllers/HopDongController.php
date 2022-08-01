@@ -51,7 +51,7 @@ class HopDongController extends Controller
             "noi_dung" => $req->input('noi_dung'),
             "thoi_han" => $thoi_han,
             "ma_nv" => $req->input('ma_nv'),
-            "luong_mot_gio" => $req->input('luong_mot_gio'),
+            "luong_mot_ngay" => $req->input('luong_mot_ngay'),
         ];
 
         $this->validate($req, [
@@ -59,14 +59,14 @@ class HopDongController extends Controller
             'ngay_ket_thuc' => 'required',
             'ngay_ky' => 'required',
             'noi_dung' => 'required',
-            'luong_mot_gio' => 'required',
+            'luong_mot_ngay' => 'required',
             'ma_nv' => 'required'
         ], [
             'ngay_bat_dau.required' => '*Chưa nhập ngày bắt đầu',
             'ngay_ket_thuc.required' => '*Chưa nhập ngày kết thúc',
             'ngay_ky.required' => '*Chưa nhập ngày ký',
             'noi_dung.required' => '*Chưa nhập nội dung',
-            'luong_mot_gio.required' => '*Chưa nhập lương một giờ',
+            'luong_mot_ngay.required' => '*Chưa nhập lương một ngày',
             'ma_nv.required' => '*Chưa chọn nhân viên'
         ]);
 
@@ -119,7 +119,7 @@ class HopDongController extends Controller
             "ngay_ky" => $req->input('ngay_ky'),
             "noi_dung" => $req->input('noi_dung'),
             "ma_nv" => $req->input('ma_nv'),
-            "luong_mot_gio" => $req->input('luong_mot_gio'),
+            "luong_mot_ngay" => $req->input('luong_mot_ngay'),
         ];
 
         $this->validate($req, [
@@ -127,14 +127,14 @@ class HopDongController extends Controller
             'ngay_ket_thuc' => 'required',
             'ngay_ky' => 'required',
             'noi_dung' => 'required',
-            'luong_mot_gio' => 'required',
+            'luong_mot_ngay' => 'required',
             'ma_nv' => 'required'
         ], [
             'ngay_bat_dau.required' => '*Chưa nhập ngày bắt đầu',
             'ngay_ket_thuc.required' => '*Chưa nhập ngày kết thúc',
             'ngay_ky.required' => '*Chưa nhập ngày ký',
             'noi_dung.required' => '*Chưa nhập nội dung',
-            'luong_mot_gio.required' => '*Chưa nhập lương một giờ',
+            'luong_mot_ngay.required' => '*Chưa nhập lương một ngày',
             'ma_nv.required' => '*Chưa chọn nhân viên'
         ]);
 

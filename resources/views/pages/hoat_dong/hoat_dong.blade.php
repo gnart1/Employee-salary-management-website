@@ -33,8 +33,28 @@
                                         <th>
                                             Tiền đóng
                                         </th>
+                                        <th>
+                                            Action
+                                        </th>
                                     </thead>
                                     <tbody>
+                                        @forelse ($all_hoat_dong as $hoat_dong)
+                                        <tr>
+                                            <td>{{ $hoat_dong->ten_hd }}</td>
+                                            <td>{{ $hoat_dong->ten_pb }}</td>
+                                            <td>{{ $hoat_dong->thoi_gian }}</td>
+                                            <td>{{ $hoat_dong->dia_diem }}</td>
+                                            <td>{{ $hoat_dong->so_tien }}</td>
+                                            <td class="">
+                                                <button type="button" class="btn btn-primary">
+                                                    <a href={{ route('sua_hoat_dong', ['id' => $hoat_dong->ma_hd]) }}
+                                                        class="text-white">Sửa</a>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    @empty
+                                        <p>Không tìm thấy bản ghi nào</p>
+                                    @endforelse
                                     </tbody>
                                 </table>
                             </div>
@@ -44,30 +64,4 @@
             </div>
         </div>
     </div>
-
-    {{-- <script type="text/javascript">
-        $('#datepicker1').on('change',function(e){
-            $value= e.currentTarget.value;
-            $.ajax({
-                type : 'get',
-                url : '/filter_luong/',
-                data:{'month_year':$value},
-                success:function(data){
-                    if (data.luongs.length) {
-                        data_table.destroy();
-                        $('tbody').html(data.luongs);
-
-                        data_table = $('#data-table').DataTable({
-                            "dom": '<"toolbar">frtip'
-                        });
-                        $("#data-table_filter").css("margin-right", "10px");
-                        $("#data-table_length").css("margin-left", "10px");
-                    } else {
-                        $('tbody').html("");
-                    }
-                    
-                }
-            });
-        })
-    </script> --}}
 @endsection

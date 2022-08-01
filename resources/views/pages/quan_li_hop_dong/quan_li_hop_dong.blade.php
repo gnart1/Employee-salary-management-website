@@ -36,7 +36,7 @@
                       Tên nhân viên
                     </th>
                     <th>
-                      Lương theo giờ
+                      Lương theo ngày
                     </th>
                     <th  class="text-center">Action</th>
                   </thead>
@@ -49,7 +49,7 @@
                             <td>{{ $hop_dong->noi_dung }}</td>
                             <td>{{ $hop_dong->thoi_han }} tháng</td>
                             <td>{{ $hop_dong->ho_ten }}</td>
-                            <td>{{ $hop_dong->luong_mot_gio }}</td>
+                            <td>{{ $hop_dong->luong_mot_ngay }}</td>
                             <td class="">
                                 <button type="button" class="btn btn-primary">
                                     <a href={{ route('sua_hop_dong', ['id' => $hop_dong->ma_hd]) }} class="text-white">Sửa</a>

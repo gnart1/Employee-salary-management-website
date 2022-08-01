@@ -1,16 +1,16 @@
-@extends('layouts.app', ['activePage' => 'quan_li_ky_luat', 'titlePage' => __('Sửa loại kỷ luật')])
+@extends('layouts.app', ['activePage' => 'quan_li_khen_thuong', 'titlePage' => __('Sửa khen thưởng')])
 @section('content')
     <div class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <form method="post" action="{{ route('update_ky_luat', ['id' => $ky_luat->ma_loai_kl]) }}"
+                    <form method="post" action="{{ route('update_khen_thuong', ['id' => $khen_thuong->ma_kt]) }}"
                         autocomplete="off" class="form-horizontal">
                         @csrf
                         @method('post')
                         <div class="card ">
                             <div class="card-header card-header-primary">
-                                <h4 class="card-title">{{ __('Sửa loại kỷ luật') }}</h4>
+                                <h4 class="card-title">{{ __('Sửa khen thưởng') }}</h4>
                             </div>
                             <div class="card-body ">
                                 @if (session('status'))
@@ -27,31 +27,31 @@
                                     </div>
                                 @endif
                                 <div class="row">
-                                    <label class="col-sm-2 col-form-label">{{ __('Tên loại kỷ luật') }}</label>
+                                    <label class="col-sm-2 col-form-label">{{ __('Tên loại khen thưởng') }}</label>
                                     <div class="col-sm-7">
-                                        <div class="form-group{{ $errors->has('ten_loai_kl') ? ' has-danger' : '' }}">
+                                        <div class="form-group{{ $errors->has('loai_kt') ? ' has-danger' : '' }}">
                                             <input
-                                                class="form-control{{ $errors->has('ten_loai_kl') ? ' is-invalid' : '' }}"
-                                                name="ten_loai_kl" value="{{ $ky_luat->ten_loai_kl }}"
-                                                id="input-ten_loai_kl" type="text" />
-                                            @if ($errors->has('ten_loai_kl'))
+                                                class="form-control{{ $errors->has('loai_kt') ? ' is-invalid' : '' }}"
+                                                name="loai_kt" value="{{ $khen_thuong->loai_kt }}"
+                                                id="input-loai_kt" type="text" />
+                                            @if ($errors->has('loai_kt'))
                                                 <span id="name-error" class="error text-danger"
-                                                    for="input-ten_loai_kl">{{ $errors->first('ten_loai_kl') }}</span>
+                                                    for="input-loai_kt">{{ $errors->first('loai_kt') }}</span>
                                             @endif
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <label class="col-sm-2 col-form-label">{{ __('Tiền phạt') }}</label>
+                                    <label class="col-sm-2 col-form-label">{{ __('Tiền thưởng') }}</label>
                                     <div class="col-sm-7">
-                                        <div class="form-group{{ $errors->has('tien_phat') ? ' has-danger' : '' }}">
+                                        <div class="form-group{{ $errors->has('tien_thuong') ? ' has-danger' : '' }}">
                                             <input
-                                                class="form-control{{ $errors->has('tien_phat') ? ' is-invalid' : '' }}"
-                                                name="tien_phat" value="{{ $ky_luat->tien_phat }}" id="input-ten_loai_kl"
+                                                class="form-control{{ $errors->has('tien_thuong') ? ' is-invalid' : '' }}"
+                                                name="tien_thuong" value="{{ $khen_thuong->tien_thuong }}" id="input-loai_kt"
                                                 type="text" />
-                                            @if ($errors->has('tien_phat'))
-                                                <span id="tien_phat-error" class="error text-danger"
-                                                    for="input-tien_phat">{{ $errors->first('tien_phat') }}</span>
+                                            @if ($errors->has('tien_thuong'))
+                                                <span id="tien_thuong-error" class="error text-danger"
+                                                    for="input-tien_thuong">{{ $errors->first('tien_thuong') }}</span>
                                             @endif
                                         </div>
                                     </div>

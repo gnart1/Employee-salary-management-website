@@ -12,7 +12,8 @@ class BaoHiemModel extends Model
     public static function getAll() {
         return DB::table('bao_hiem')
             ->join('loai_bao_hiem','loai_bao_hiem.ma_loai_bh','=','bao_hiem.ma_loai_bh')
-            ->join('users','users.id','=','bao_hiem.ma_nv')
+            ->join('hop_dong','hop_dong.ma_hd','=','bao_hiem.ma_hd')
+            ->join('users', 'users.id','=', 'hop_dong.ma_nv')
             ->select('ma_bh', 'so_bh','ngay_cap', 'noi_cap', 'noi_kham_benh', 'ho_ten', 'ngay_sinh', 'ten_loai_bh')
             ->get();
     }

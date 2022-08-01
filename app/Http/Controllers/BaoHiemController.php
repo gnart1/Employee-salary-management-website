@@ -112,7 +112,7 @@ class BaoHiemController extends Controller
             "ngay_cap" => $req->input('ngay_cap'),
             "noi_cap" => $req->input('noi_cap'),
             "noi_kham_benh" => $req->input('noi_kham_benh'),
-            "ma_nv" => $req->input('ma_nv'),
+            "ma_hd" => $req->input('ma_hd'),
             "ma_loai_bh" => $req->input('ma_loai_bh'),
         ];
 

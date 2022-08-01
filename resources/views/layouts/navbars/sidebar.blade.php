@@ -6,7 +6,7 @@
   -->
   <div class="logo">
       <a href="#" class="simple-text logo-normal">
-          {{ __('Yamete Kudasai icu icu') }}
+          {{ __('Quản lý nhân sự') }}
       </a>
   </div>
   <div class="sidebar-wrapper">
@@ -277,7 +277,7 @@
           </li>
 
           {{-- Quản lý kỳ luật --}}
-          <li class="nav-item {{ $activePage == 'quan_li_ky_luat' ? ' active' : '' }}">
+          <li class="nav-item {{ $activePage == 'quan_li_loai_kl' ? ' active' : '' }}">
               <a class="nav-link" data-toggle="collapse" href="#quan_li_ky_luat" aria-expanded="true">
                   <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
                   <p>{{ __('Loại kỉ luật') }}
@@ -286,7 +286,7 @@
               </a>
               <div class="collapse hide" id="quan_li_ky_luat">
                   <ul class="nav">
-                      <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
+                      <li class="nav-item{{ $activePage == 'quan_li_ky_luat' ? ' active' : '' }}">
                           <a class="nav-link" href="{{ route('quan_li_ky_luat') }}">
                               <span class="sidebar-mini"> UP </span>
                               <span class="sidebar-normal">{{ __('Danh sách loại kỷ luật') }} </span>
@@ -301,6 +301,31 @@
                   </ul>
               </div>
           </li>
+           {{-- Quản lý khen thưởng --}}
+           <li class="nav-item {{ $activePage == 'quan_li_khen_thuong' ? ' active' : '' }}">
+            <a class="nav-link" data-toggle="collapse" href="#quan_li_khen_thuong" aria-expanded="true">
+                <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
+                <p>{{ __('Loại khen thưởng') }}
+                    <b class="caret"></b>
+                </p>
+            </a>
+            <div class="collapse hide" id="quan_li_khen_thuong">
+                <ul class="nav">
+                    <li class="nav-item{{ $activePage == 'quan_li_khen_thuong' ? ' active' : '' }}">
+                        <a class="nav-link" href="{{ route('quan_li_khen_thuong') }}">
+                            <span class="sidebar-mini"> UP </span>
+                            <span class="sidebar-normal">{{ __('Danh sách loại khen thưởng') }} </span>
+                        </a>
+                    </li>
+                    <li class="nav-item{{ $activePage == 'them_khen_thuong' ? ' active' : '' }}">
+                        <a class="nav-link" href="{{ route('them_khen_thuong') }}">
+                            <span class="sidebar-mini"> UM </span>
+                            <span class="sidebar-normal"> {{ __('Thêm loại khen thưởng') }} </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
           {{-- Quản lý phòng ban --}}
           <li class="nav-item {{ $activePage == 'quan_li_phong_ban' ? ' active' : '' }}">
               <a class="nav-link" data-toggle="collapse" href="#quan_li_phong_ban" aria-expanded="true">

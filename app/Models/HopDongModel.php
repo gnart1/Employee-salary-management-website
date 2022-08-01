@@ -12,7 +12,7 @@ class HopDongModel extends Model
     public static function getAll() {
         return DB::table('hop_dong')
             ->join('users','users.id','=','hop_dong.ma_nv')
-            ->select('ma_hd', 'ngay_bat_dau','ngay_ket_thuc', 'ngay_ky', 'noi_dung', 'thoi_han', 'ma_nv', 'ho_ten', 'luong_mot_gio')
+            ->select('ma_hd', 'ngay_bat_dau','ngay_ket_thuc', 'ngay_ky', 'noi_dung', 'thoi_han', 'ma_nv', 'ho_ten', 'luong_mot_ngay')
             ->get();
     }
     public static function getById($id) {

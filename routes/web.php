@@ -39,6 +39,10 @@ Route::group(['middleware' => 'auth'], function () {
         // Hoat dong
         Route::get('/hoat_dong', 'App\Http\Controllers\HoatDongController@index')->name('hoat_dong');
         Route::get('/them_hoat_dong', 'App\Http\Controllers\HoatDongController@create')->name('them_hoat_dong');
+        Route::post('/luu_them_hoat_dong', 'App\Http\Controllers\HoatDongController@store')->name('luu_them_hoat_dong');
+        Route::post('/update_hoat_dong/{id}', 'App\Http\Controllers\HoatDongController@update')->name('update_hoat_dong');
+        Route::get('/sua_hoat_dong/{id}', 'App\Http\Controllers\HoatDongController@edit')->name('sua_hoat_dong');
+
         // Chuc vu
         Route::get('/quan_li_chuc_vu', 'App\Http\Controllers\ChucVuController@index')->name('quan_li_chuc_vu');
         Route::get('/them_chuc_vu', 'App\Http\Controllers\ChucVuController@create')->name('them_chuc_vu');
@@ -75,6 +79,13 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/luu_them_ky_luat', 'App\Http\Controllers\KyLuatController@store')->name('luu_them_ky_luat');
         Route::get('/sua_ky_luat/{id}', 'App\Http\Controllers\KyLuatController@edit')->name('sua_ky_luat');
         Route::post('/update_ky_luat/{id}', 'App\Http\Controllers\KyLuatController@update')->name('update_ky_luat');
+
+        //Loại khen thưởng
+        Route::get('/quan_li_khen_thuong', 'App\Http\Controllers\KhenThuongController@index')->name('quan_li_khen_thuong');
+        Route::get('/them_khen_thuong', 'App\Http\Controllers\KhenThuongController@create')->name('them_khen_thuong');
+        Route::post('/luu_them_khen_thuong', 'App\Http\Controllers\KhenThuongController@store')->name('luu_them_khen_thuong');
+        Route::get('/sua_khen_thuong/{id}', 'App\Http\Controllers\KhenThuongController@edit')->name('sua_khen_thuong');
+        Route::post('/update_khen_thuong/{id}', 'App\Http\Controllers\KhenThuongController@update')->name('update_khen_thuong');
 
         //Bộ phận
         Route::get('/quan_li_bo_phan', 'App\Http\Controllers\BoPhanController@index')->name('quan_li_bo_phan');
