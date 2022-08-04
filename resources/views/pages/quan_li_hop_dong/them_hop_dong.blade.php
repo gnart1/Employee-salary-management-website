@@ -98,15 +98,15 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <label class="col-sm-2 col-form-label">{{ __('Lương theo giờ') }}</label>
+                                    <label class="col-sm-2 col-form-label">{{ __('Lương theo ngày') }}</label>
                                     <div class="col-sm-7">
                                         <input
-                                            class="form-control{{ $errors->has('luong_mot_gio') ? ' is-invalid' : '' }}"
-                                            name="luong_mot_gio" id="input-luong_mot_gio" type="text"
-                                            placeholder="{{ __('Lương một giờ') }}" />
-                                        @if ($errors->has('luong_mot_gio'))
-                                            <span id="luong_mot_gio-error" class="error text-danger"
-                                                for="input-luong_mot_gio">{{ $errors->first('luong_mot_gio') }}</span>
+                                            class="form-control{{ $errors->has('luong_mot_ngay') ? ' is-invalid' : '' }}"
+                                            name="luong_mot_ngay" id="input-luong_mot_ngay" type="text"
+                                            placeholder="{{ __('Lương một ngày') }}" />
+                                        @if ($errors->has('luong_mot_ngay'))
+                                            <span id="luong_mot_ngay-error" class="error text-danger"
+                                                for="input-luong_mot_ngay">{{ $errors->first('luong_mot_ngay') }}</span>
                                         @endif
                                     </div>
                                 </div>

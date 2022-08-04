@@ -25,10 +25,10 @@ class ChamCongController extends Controller
         $user_id = Auth::id();
         $today_str = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
         $cham_cong = ChamCongModel::getGioVao($user_id, $today_str);
-        $work_time = Carbon::parse("09:00:00");
+        $work_time = Carbon::parse("5:00:00");
         $now = Carbon::now('Asia/Ho_Chi_Minh');
         $now_str = $now->toTimeString();
-
+//dd($now_str);
         $hop_dong =  ChamCongModel::getHopDongNhanVien($user_id);
         $ngay_het_han = Carbon::parse($hop_dong->ngay_ket_thuc)->setTimeZone('Asia/Ho_Chi_Minh');
 
@@ -44,14 +44,16 @@ class ChamCongController extends Controller
 
         if ($now > $work_time) {
             $late_minutes = $work_time->diffInMinutes($now);
+           // dd($late_minutes);
             if ($late_minutes <= 30) {
                 $ma_loai_kl = 1;
             }
             if ($late_minutes > 30) {
                 $ma_loai_kl = 2;
             }
+
         } else {
-            $now_str = $work_time->toTimeString();
+            $now = $work_time->toTimeString();
             $ma_loai_kl = 3;
         }
         $data = [
@@ -60,6 +62,7 @@ class ChamCongController extends Controller
             'gio_vao' => $now_str,
             'ma_loai_kl' => $ma_loai_kl
         ];
+        //dd($data);
         $rs = ChamCongModel::chamCongDen($data);
         if ($rs) {
             $ma_bc = ChamCongModel::getCurrentItem($data)->ma_bc;
@@ -76,7 +79,7 @@ class ChamCongController extends Controller
         $user_id = Auth::id();
         $now = Carbon::now('Asia/Ho_Chi_Minh');
         $today_str = Carbon::now('Asia/Ho_Chi_Minh')->toDateString();
-        $gio_ra = Carbon::parse("18:00:00");
+        $gio_ra = Carbon::parse("4:00:00");
         $gio_ra_str = $gio_ra->toTimeString();
         $bang_cong = ChamCongModel::getGioVao($user_id, $today_str);
         $gio_vao = Carbon::parse($bang_cong->gio_vao);

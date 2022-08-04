@@ -103,7 +103,7 @@
                                     <label class="col-sm-2 col-form-label">{{ __('Lương theo ngày') }}</label>
                                     <div class="col-sm-7">
                                         <input
-                                            class="form-control{{ $errors->has('luong_mot_gio') ? ' is-invalid' : '' }}"
+                                            class="form-control{{ $errors->has('luong_mot_ngay') ? ' is-invalid' : '' }}"
                                             name="luong_mot_ngay" value="{{ $hop_dong->luong_mot_ngay }}"
                                             id="input-luong_mot_ngay" type="text"
                                             placeholder="{{ __('Sửa lương theo ngày') }}" />

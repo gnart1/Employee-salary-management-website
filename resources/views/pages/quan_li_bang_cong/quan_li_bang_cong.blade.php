@@ -31,9 +31,9 @@
                                         <th>
                                             Giờ ra
                                         </th>
-                                        <th>
+                                        {{-- <th>
                                             Thời gian làm việc
-                                        </th>
+                                        </th> --}}
                                         <th>
                                             Trạng thái
                                         </th>
@@ -48,9 +48,9 @@
                                                 <td>{{ $bang_cong->ngay }}</td>
                                                 <td>{{ $bang_cong->gio_vao }}</td>
                                                 <td>{{ $bang_cong->gio_ra }}</td>
-                                                <td>{{ $bang_cong->thoi_gian }}</td>
+                                                {{-- <td>{{ $bang_cong->thoi_gian }}</td> --}}
                                                 <td>{{ $bang_cong->ten_loai_kl }}</td>
-                                                <td>{{ $bang_cong->tien_thuong }}</td>
+                                                {{-- <td>{{ $bang_cong->tien_thuong }}</td> --}}
                                                 <td>{{ $bang_cong->tien_phat }}</td>
                                             </tr>
                                         @empty

@@ -29,10 +29,10 @@
                                             Số ngày làm
                                         </th>
                                         <th>Lương 1 ngày</th>
-                                        {{-- <th>Lương tháng này</th>
-                                        <th>Nợ tháng trước</th> --}}
+                                         {{-- <th>Lương tháng này</th> --}}
+                                       {{-- <th>Nợ tháng trước</th> --}}
                                         <th>Thực nhận</th>
-                                        <th>Nợ tháng này</th>
+                                        {{-- <th>Nợ tháng này</th> --}}
                                     </thead>
                                     <tbody>
 

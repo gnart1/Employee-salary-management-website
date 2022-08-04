@@ -52,7 +52,7 @@ class LuongController extends Controller
                     //         LuongModel::resolveNo($ma_nv ,$no_thang_truoc->thang, $no_thang_truoc->nam);
                     //         $luong->tien_no_thang_truoc = $tien_no_thang_truoc;
                     //         $luong->tien_no_thang_nay = 0;
-                    //     }<td>' . $luong->tien_no_thang_truoc . '</td><td>' . $luong->tien_no_thang_nay . '</td>
+                    //     }<td>' . $luong->tien_no_thang_truoc . '</td><td>' . $luong->tien_no_thang_nay . '</td><td>' . $luong->luong_thang_nay . '</td>  
                     // }
                     $output .=   '<tr>
                                 <td>' . $luong->ho_ten . '</td>
@@ -60,12 +60,11 @@ class LuongController extends Controller
                                 <td>' . $luong->tong_tien_phat . '</td>
                                 <td>' . $luong->luong_trach_nhiem . '</td>
                                 <td>' . $luong->tong_so_ngay . '</td>
-                                <td>' . $luong->luong_mot_ngay . '</td>
-                                <td>' . $luong->luong_thang_nay . '</td>                               
+                                <td>' . $luong->luong_mot_ngay . '</td>                                             
                                 <td>' . $luong->luong . '</td>
                                 
                             </tr>';
-                           // dd($output);
+                            //dd($output);
                     }
 
                 }
